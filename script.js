@@ -1,28 +1,37 @@
-const messagesContainer = document.getElementById('messages');
-const messageInput = document.getElementById('messageInput');
-const sendButton = document.getElementById('sendButton');
+const openPopup = document.getElementById('openPopup');
+const closePopup = document.getElementById('closePopup');
+const popup = document.getElementById('popup');
 
-// Simple function to append messages to the chat
-function appendMessage(text) {
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message');
-    messageElement.innerText = text;
-    messagesContainer.appendChild(messageElement);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight; // Auto-scroll to the bottom
-}
+const menuDots = document.getElementById('menuDots');
+const menuPopup = document.getElementById('menuPopup');
+const closeMenu = document.getElementById('closeMenu');
 
-// Send message on button click
-sendButton.addEventListener('click', function() {
-    const messageText = messageInput.value.trim();
-    if (messageText) {
-        appendMessage(`You: ${messageText}`);
-        messageInput.value = ''; // Clear input
-    }
+// Open the product popup
+openPopup.addEventListener('click', function() {
+    popup.style.display = 'block';
 });
 
-// Send message on Enter key press
-messageInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        sendButton.click();
+// Close the product popup
+closePopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+
+// Open the menu popup
+menuDots.addEventListener('click', function() {
+    menuPopup.style.display = 'block';
+});
+
+// Close the menu popup
+closeMenu.addEventListener('click', function() {
+    menuPopup.style.display = 'none';
+});
+
+// Close the product popup when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target == popup) {
+        popup.style.display = 'none';
+    }
+    if (event.target == menuPopup) {
+        menuPopup.style.display = 'none';
     }
 });
