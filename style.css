@@ -1,61 +1,49 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Bisnis</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Blog Bisnis Saya</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-    <main>
-        <section id="home">
-            <h2>Artikel Terbaru</h2>
-            <article>
-                <h3>Judul Artikel 1</h3>
-                <p>Ringkasan artikel 1...</p>
-                <a href="#">Baca Selengkapnya</a>
-            </article>
-            <article>
-                <h3>Judul Artikel 2</h3>
-                <p>Ringkasan artikel 2...</p>
-                <a href="#">Baca Selengkapnya</a>
-            </article>
-        </section>
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
 
-        <section id="about">
-            <h2>Tentang Kami</h2>
-            <p>Deskripsi tentang blog bisnis ini.</p>
-        </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-        <section id="contact">
-            <h2>Kontak Kami</h2>
-            <form id="contact-form">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Pesan:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Kirim</button>
-            </form>
-        </section>
-    </main>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-    <footer>
-        <p>&copy; 2024 Blog Bisnis Saya. Semua hak dilindungi.</p>
-    </footer>
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+main {
+    padding: 20px;
+}
+
+article {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
