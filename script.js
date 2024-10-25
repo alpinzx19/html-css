@@ -1,17 +1,49 @@
-document.getElementById('wifiForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-    const ssid = document.getElementById('ssid').value;
-    const password = document.getElementById('password').value;
-    const messageElement = document.getElementById('message');
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
 
-    // Simulate WiFi connection process
-    if (ssid && password) {
-        messageElement.textContent = 'Connecting to ' + ssid + '...';
-        setTimeout(() => {
-            messageElement.textContent = 'Connected to ' + ssid + '!';
-        }, 2000);
-    } else {
-        messageElement.textContent = 'Please enter valid credentials.';
-    }
-});
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+article {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+        }
